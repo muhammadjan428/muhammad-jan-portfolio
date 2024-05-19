@@ -40,7 +40,7 @@ const Navbar = () => {
           <li key={index} className="list-none">
             <a
               href={link.path}
-              className="block text-sm lg:text-xl hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110 my-2 lg:my-0"
+              className="block text-sm lg:text-xl hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110 my-2 px-6 lg:my-0"
             >
               {link.title}
             </a>
