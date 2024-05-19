@@ -23,7 +23,6 @@ export default function EmailForm() {
     setIsSubmitting(true);
     await sendEmail({
       from: formData.email,
-      to: "mjan23925@gmail.com",
       subject: formData.subject,
       body: formData.message,
     });
