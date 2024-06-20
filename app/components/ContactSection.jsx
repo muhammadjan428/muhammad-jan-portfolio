@@ -1,7 +1,5 @@
-import GithubIcon from "@/public/assets/github-mark.svg";
-import LinkedinIcon from "@/public/assets/Linkedin.svg";
-
-import Image from "next/image";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ContactSection = () => {
   return (
     <section className="flex flex-col text-gray-800 md:w-1/2 w-full mt-10" id="contact">
@@ -28,26 +26,17 @@ const ContactSection = () => {
               href="https://github.com/muhammadjan428"
               target="_blank"
               rel="noopener noreferrer"
+              className="mr-5"
             >
-              <Image
-                className="mr-5 md:w-12"
-                src={GithubIcon}
-                alt="GitHub Logo"
-                width={40}
-              />
+              <FontAwesomeIcon icon={faGithub} size="2x" className="text-black" />
             </a>
             <a
-            className=""
               href="https://www.linkedin.com/in/muhammad-jan-b247092a0"
               target="_blank"
               rel="noopener noreferrer"
+              className="mt-0.5"
             >
-              <Image
-                className="mt-0.5 md:w-12"
-                src={LinkedinIcon}
-                alt="LinkedIn Logo"
-                width={40}
-              />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-black" />
             </a>
           </div>
         </div>
