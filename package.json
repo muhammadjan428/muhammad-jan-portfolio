@@ -17,11 +17,19 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+<<<<<<< HEAD
     "lucide-react": "^1.7.0",
     "next": "^16.2.2",
     "nodemailer": "^6.9.13",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+=======
+    "lucide-react": "^0.378.0",
+    "next": "14.2.3",
+    "nodemailer": "^6.9.13",
+    "react": "^18",
+    "react-dom": "^18",
+>>>>>>> 0a89b6af442d415880a0923e6bb9ac9fe037607e
     "react-hook-form": "^7.51.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
