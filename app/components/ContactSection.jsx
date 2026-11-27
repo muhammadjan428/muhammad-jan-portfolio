@@ -42,9 +42,19 @@ const ArrowIcon = () => (
 /* ── Contact items — no accentColor needed; hover handled by CSS ── */
 const contactItems = [
   {
+    label: "WhatsApp",
+    value: "+92 315 5152772",
+    href: "https://wa.me/923155152772",
+    icon: <WhatsappIcon />,
+    hoverClass: "green-hover",
+    iconBg: "rgba(37, 211, 102, 0.08)",
+    iconBorder: "rgba(37, 211, 102, 0.2)",
+    iconColor: "#25d366",
+  },
+  {
     label: "Email",
-    value: "mjan23925@gmail.com",
-    href: "mailto:mjan23925@gmail.com",
+    value: "muhammadjanfullstack@gmail.com",
+    href: "mailto:muhammadjanfullstack@gmail.com",
     icon: <EmailIcon />,
     hoverClass: "accent-hover",
     iconBg: "var(--accent-dim)",
@@ -70,16 +80,6 @@ const contactItems = [
     iconBg: "var(--accent-dim)",
     iconBorder: "rgba(34,211,238,0.2)",
     iconColor: "var(--accent)",
-  },
-  {
-    label: "WhatsApp",
-    value: "+92 348 0967184",
-    href: "https://wa.me/923480967184",
-    icon: <WhatsappIcon />,
-    hoverClass: "green-hover",
-    iconBg: "rgba(37, 211, 102, 0.08)",
-    iconBorder: "rgba(37, 211, 102, 0.2)",
-    iconColor: "#25d366",
   },
 ];
 

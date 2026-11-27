@@ -3,7 +3,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      id="/"
+      id="top"
       style={{
         minHeight: "90vh",
         display: "flex",
@@ -30,7 +30,7 @@ const Hero = () => {
 
       <div style={{ opacity: 0, animation: "fadeUp 0.8s ease 0.1s forwards" }}>
         <p className="section-label" style={{ marginBottom: "20px" }}>
-          👋 Available for freelance work
+          Available for freelance work
         </p>
       </div>
 
@@ -40,13 +40,13 @@ const Hero = () => {
             fontFamily: "var(--font-heading)",
             fontSize: "clamp(42px, 7vw, 88px)",
             fontWeight: 800,
-            lineHeight: 1.05,
+            lineHeight: 1.15,
             letterSpacing: "-2px",
             marginBottom: "8px",
             color: "var(--text-primary)",
           }}
         >
-          Full Stack
+          Software
         </h1>
         <h1
           className="shimmer-text"
@@ -54,12 +54,14 @@ const Hero = () => {
             fontFamily: "var(--font-heading)",
             fontSize: "clamp(42px, 7vw, 88px)",
             fontWeight: 800,
-            lineHeight: 1.05,
+            lineHeight: 1.15,
             letterSpacing: "-2px",
+            display: "inline-block",
+            paddingBottom: "0.15em",
             marginBottom: "32px",
           }}
         >
-          Developer.
+          Engineer.
         </h1>
       </div>
 
@@ -73,12 +75,10 @@ const Hero = () => {
             fontFamily: "var(--font-body)",
           }}
         >
-          I craft seamless digital experiences with{" "}
-          <span style={{ color: "var(--accent)", fontWeight: 600 }}>Next.js</span>{" "}
-          and{" "}
-          <span style={{ color: "var(--accent)", fontWeight: 600 }}>MongoDB</span>.
-          From responsive interfaces to robust APIs — I turn ideas into polished,
-          production-ready products.
+          I build fast, reliable web applications, from polished user interfaces to the
+          backend systems behind them. With over three years of hands-on experience, I
+          focus on clean code, thoughtful design, and performance, so your product works
+          well for real users from the first launch.
         </p>
         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
           <a href="#contact" className="btn-primary">
@@ -105,9 +105,9 @@ const Hero = () => {
         }}
       >
         {[
-          { value: "5+",   label: "Projects Built" },
-          { value: "6+",   label: "Months Building" },
-          { value: "100%", label: "Self-Taught" },
+          { value: "5+", label: "Projects Delivered" },
+          { value: "3+", label: "Years Experience" },
+          { value: "4+", label: "Tech Stacks Mastered" },
         ].map((stat, i) => (
           <div key={i}>
             <p

@@ -14,18 +14,11 @@ const skills = [
     bg: "rgba(97,218,251,0.08)",
   },
   {
-    name: "Node.js",
-    icon: "⬡",
-    desc: "Server-side runtime",
-    color: "#6cc24a",
-    bg: "rgba(108,194,74,0.08)",
-  },
-  {
-    name: "MongoDB",
-    icon: "🍃",
-    desc: "NoSQL database",
-    color: "#47a248",
-    bg: "rgba(71,162,72,0.08)",
+    name: "TypeScript",
+    icon: "TS",
+    desc: "Type-safe JavaScript",
+    color: "#3178c6",
+    bg: "rgba(49,120,198,0.08)",
   },
   {
     name: "JavaScript",
@@ -35,11 +28,25 @@ const skills = [
     bg: "rgba(247,223,30,0.08)",
   },
   {
-    name: "TypeScript",
-    icon: "TS",
-    desc: "Typed JavaScript",
-    color: "#3178c6",
-    bg: "rgba(49,120,198,0.08)",
+    name: "Node.js",
+    icon: "⬡",
+    desc: "Server-side runtime",
+    color: "#6cc24a",
+    bg: "rgba(108,194,74,0.08)",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "🐘",
+    desc: "Relational database",
+    color: "#60a5fa",
+    bg: "rgba(96,165,250,0.08)",
+  },
+  {
+    name: "MongoDB",
+    icon: "🍃",
+    desc: "NoSQL database",
+    color: "#47a248",
+    bg: "rgba(71,162,72,0.08)",
   },
   {
     name: "Tailwind CSS",
@@ -94,7 +101,7 @@ const About = () => {
             marginBottom: "16px",
           }}
         >
-          About Me
+          Software Engineer
         </h2>
         <p
           style={{
@@ -105,9 +112,10 @@ const About = () => {
             marginBottom: "60px",
           }}
         >
-          I&apos;m a self-taught full-stack developer based in Pakistan, passionate about
-          building real-world products. I went from zero web dev experience to shipping
-          production applications — and I&apos;m just getting started.
+          I build web applications that are fast, reliable, and easy to maintain. Over
+          three years of hands-on experience have taught me to balance clean interfaces
+          with solid backend architecture, so the products I deliver perform well for
+          real users from day one.
         </p>
       </div>
 
@@ -140,8 +148,7 @@ const About = () => {
       >
         {skills.map((skill, i) => (
           <div
-            key={i}
-            /* skill-card adds will-change: transform via globals.css */
+            key={skill.name}
             className="card skill-card"
             style={{
               padding: "20px",

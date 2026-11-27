@@ -1,96 +1,53 @@
+import Link from "next/link";
+
+const navLinks = [
+  { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
+
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer
-      style={{
-        position: "relative",
-        zIndex: 1,
-        borderTop: "1px solid var(--border)",
-        padding: "36px 0",
-        marginTop: "40px",
-      }}
-    >
-      {/* Subtle top glow line */}
+    <footer className="relative z-[1] mt-10 border-t border-[var(--border)] py-9">
+      {/* Accent glow line */}
       <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "200px",
-          height: "1px",
-          background: "linear-gradient(90deg, transparent, var(--accent), transparent)",
-          opacity: 0.5,
-        }}
+        aria-hidden
+        className="absolute left-1/2 top-0 h-px w-[200px] -translate-x-1/2 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent opacity-50"
       />
 
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "14px",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <div
-            style={{
-              width: "28px",
-              height: "28px",
-              background: "var(--accent)",
-              borderRadius: "7px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: "var(--font-heading)",
-              fontWeight: 800,
-              fontSize: "13px",
-              color: "#080d14",
-              boxShadow: "0 0 10px var(--accent-glow)",
-            }}
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6">
+        <Link href="/" className="group flex items-center gap-2.5">
+          <span
+            aria-hidden
+            className="flex h-7 w-7 items-center justify-center rounded-[7px] bg-[var(--accent)] font-[family-name:var(--font-heading)] text-[13px] font-extrabold text-[#080d14] shadow-[0_0_10px_var(--accent-glow)]"
           >
             M
-          </div>
-          <span
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontWeight: 600,
-              fontSize: "15px",
-              color: "var(--text-primary)",
-            }}
-          >
+          </span>
+          <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
             Muhammad Jan
           </span>
-        </div>
+        </Link>
 
-        {/* Divider dots */}
-        <div style={{ display: "flex", gap: "6px", alignItems: "center" }}>
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              style={{
-                width: "3px",
-                height: "3px",
-                borderRadius: "50%",
-                background: i === 1 ? "var(--accent)" : "var(--text-muted)",
-                opacity: i === 1 ? 0.8 : 0.3,
-              }}
-            />
+        <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[13px] text-[var(--text-muted)] transition-colors hover:text-[var(--accent)]"
+            >
+              {link.label}
+            </a>
           ))}
-        </div>
+        </nav>
 
-        <p
-          style={{
-            fontSize: "12px",
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-body)",
-            textAlign: "center",
-            lineHeight: 1.6,
-          }}
-        >
-          Built with Next.js &amp; Tailwind CSS &nbsp;·&nbsp; © 2026 Muhammad Jan. All rights reserved.
+        <div aria-hidden className="h-[3px] w-[3px] rounded-full bg-[var(--accent)] opacity-80" />
+
+        <p className="text-center font-[family-name:var(--font-body)] text-xs leading-relaxed text-[var(--text-muted)]">
+          Built with Next.js &amp; Tailwind CSS
+          <span aria-hidden className="mx-2 opacity-50">·</span>
+          © {year} Muhammad Jan. All rights reserved.
         </p>
       </div>
     </footer>
